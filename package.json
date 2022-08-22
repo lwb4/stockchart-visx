@@ -1,7 +1,7 @@
 {
-  "name": "typescript-react-test",
-  "version": "1.0.0",
-  "description": "Learning how to create React modules using TypeScript!",
+  "name": "stockchart-visx",
+  "version": "0.0.1",
+  "description": "Stock chart based on visx",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -10,7 +10,8 @@
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "watch": "watch 'yarn build' ./src"
   },
   "peerDependencies": {
     "react": "^16.0.0",
@@ -21,9 +22,15 @@
     "@types/react-dom": "^16.9.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "watch": "^1.0.2"
   },
   "files": [
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "@visx/brush": "^2.12.2",
+    "@visx/visx": "^2.12.2",
+    "d3-array": "^3.2.0"
+  }
 }

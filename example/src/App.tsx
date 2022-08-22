@@ -1,11 +1,11 @@
 import React from 'react';
-import SayHello from 'typescript-react-test';
+import StockChart from 'stockchart-visx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <SayHello name="Prateek" />
+      <StockChart width={1200} height={800} />
     </div>
   );
 }
